@@ -1,48 +1,66 @@
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	background: #353535;
 }
 
 body{
-  background: url("resources/gnp2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: ;
-  background-attachment: fixed;
+	background: url("resources/gnp2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
 }
-.opacity{
-  background-color: rgba(0, 0, 0, 0.5);
+.div-opacity{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main{
-  background-color: gray;
-  font-family: fantasy;
-  color: black;
-  font-size: 22px;
-  width: 1500px;
-  margin: 100px auto;
-  height: 300px;
-  position: relative;
-  padding: 30px
+	font-family: fantasy;
+	color: black;
+	font-size: 22px;
+	width: 1500px;
+	margin: 0 auto;
+	height: 300px;
+	position: relative;
+	padding: 30px
 }
 
 .badge{
-  background-color: red;
-  color: white;
-  font-family: sans-serif;
-  width: auto;
-  padding: 0px 55px;
-  position: absolute;
-  top: -20px;
-  left: 27%;
+	background-color: red;
+	color: white;
+	font-family: sans-serif;
+	width: 0 auto;
+	padding: 10px 55px 10px 55px;
+	position: absolute;
+	top: 30px;
+	left: 27%;
+	border: 10px solid crimson;
+	border-radius: 10px;
 }
 
-.clock{
-  background-color: silver;
-  font-size: 180px;
-  width: 0 auto;
-  text-align: center;
-  height: 100%;
-  font-family: Orbitron;
+.clock-box{
+	margin-top: 40px;
+	background-color: silver;
+	width: 0 auto;
+	text-align: center;
+	border: 20px solid gray;
+	border-radius: 20px;
+	overflow-x: hidden;
 }
+
+#counter{
+	font-family: Orbitron;
+	font-size: 150px;
+	width: 1440px;
+	text-align: left;
+	margin-left: 110px;
+	margin-top: 20px;
+}
+

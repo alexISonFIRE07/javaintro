@@ -1,31 +1,22 @@
 const countDownDate = new Date("June 28, 2019 18:00:00");
 
-
-  let now = new Date().getTime();
-  let distance = countDownDate - now;
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-  let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
-
-
-
-
-  document.getElementById("days").innerHTML=days;
-  document.getElementById("hours").innerHTML= ":" + hours;
-  document.getElementById("minutes").innerHTML= ":" + minutes;
+refresher();
 
 function refresher(){
-  let now = new Date().getTime();
-  let distance = countDownDate - now;
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-  let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+	
+	let now = new Date().getTime();										// milliseconds
+	let distance = (countDownDate - now)/1000;							// convert total time left into seconds
 
-
-
-
-  document.getElementById("days").innerHTML=days;
-  document.getElementById("hours").innerHTML= ":" + hours;
-  document.getElementById("minutes").innerHTML= ":" + minutes;
+	let days = Math.floor(distance / (60 * 60 * 24));					// 12323123 / seconds * minutes * hours = days
+	let hours = Math.floor(distance % (60 * 60 * 24) / (60 * 60));		
+	let minutes = Math.floor(distance % (60 * 60) / 60);
+	let seconds = Math.floor(distance % 60);
+	
+	document.getElementById("days").innerHTML = days;
+	document.getElementById("hours").innerHTML = ":" + ("0" + hours).slice(-2);
+	document.getElementById("minutes").innerHTML = ":" + ("0" + minutes).slice(-2);
+	document.getElementById("seconds").innerHTML = ":" + ("0" + seconds).slice(-2);
+	
 }
+
 setInterval(refresher, 1000);
